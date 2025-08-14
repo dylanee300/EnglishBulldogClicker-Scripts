@@ -1,0 +1,20 @@
+"use strict";
+javascript: (function () { let intervalInput = window.prompt("What do you want the interval to be? (in milliseconds) ex: 1000"); if (!intervalInput) {
+    console.error("no interval provided");
+}
+else {
+    const interval = parseInt(intervalInput, 10);
+    if (isNaN(interval) || interval <= 0) {
+        console.error("invalid interval");
+    }
+    else {
+        console.log(`auto clicking every ${interval} milliseconds.`);
+        const doggie = document.getElementById("clickerDoggie");
+        if (!doggie) {
+            console.error("doggie not found");
+        }
+        else {
+            setInterval(() => { doggie.click(); }, interval);
+        }
+    }
+} })();
