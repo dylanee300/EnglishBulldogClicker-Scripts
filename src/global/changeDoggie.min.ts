@@ -1,0 +1,1 @@
+javascript:(()=>{const doggie=document.getElementById("clickerDoggie");if(doggie){const url=prompt("Enter the link to the image you want the doggie to be (e.g. https://i.postimg.cc/J4RhDDv1/caseOh.jpg)");if(url)doggie.src=url}else console.error("doggie not found")})();
