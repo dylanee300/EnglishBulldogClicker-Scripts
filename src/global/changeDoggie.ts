@@ -1,0 +1,10 @@
+const doggie = document.getElementById("clickerDoggie") as HTMLImageElement;
+
+if (doggie) {
+    const newImageUrl = window.prompt("Enter the link the the image you want the doggie to be (for example: https://i.postimg.cc/J4RhDDv1/caseOh.jpg)");
+    if (newImageUrl) {
+        doggie.src = newImageUrl;
+    }
+} else {
+    console.error("doggie not found");
+}
